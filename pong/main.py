@@ -1,6 +1,6 @@
 __author__ = 'rutger'
 import pygame
-import time
+from Board_Objects import *
 
 # Define some colors
 BLACK = (0, 0, 0)
@@ -21,9 +21,10 @@ clock = pygame.time.Clock()
 x, y = 40, 20
 paddle_width, paddle_length = 15, 30
 
-
 velocity = 0
 speed = 15
+
+left_paddle = Paddle(x, y, paddle_width, paddle_length, speed, screen[1])
 
 def up():
     return velocity - speed
